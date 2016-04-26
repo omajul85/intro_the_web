@@ -2,6 +2,8 @@
  	img {border-style: dashed; border-color: red;}
 </style>
 <div>
-  <h1>Hello, my name is <%= @name %> and I am <%= @age %> years old</h1>
+  <% if @name %>
+    <h1>Hello, my name is <%= @name %> and I am <%= @age %> years old</h1>
+  <% end %>
   <img src="http://bit.ly/1eze8aE">
 </div>

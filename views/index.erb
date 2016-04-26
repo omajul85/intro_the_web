@@ -2,7 +2,12 @@
  	img {border-style: dashed; border-color: red;}
 </style>
 <div>
-  <% if @name %>
+	<form action="/named-cat">
+	  Name:<br>
+	  <input type="text" name="name"><br>
+	  <input type="submit" value="Submit">
+	</form>
+  <% unless @name.empty? %>
     <h1>Hello, my name is <%= @name %> and I am <%= @age %> years old</h1>
   <% end %>
   <img src="http://bit.ly/1eze8aE">
